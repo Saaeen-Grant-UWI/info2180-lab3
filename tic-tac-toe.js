@@ -1,3 +1,4 @@
+//Exercise 1
 const load = () => {
     const board =  document.getElementById("board")
     const boardSquares = board.querySelectorAll("div")
@@ -6,6 +7,7 @@ const load = () => {
 
     boardSquares.forEach(element => element.setAttribute("class", "square"))
 
+    //Exercise 2
     boardSquares.forEach(element => element.addEventListener("click", () => {
 
         if ((clickArray.length == 0)) {
@@ -24,11 +26,16 @@ const load = () => {
         }
 
         clickArray[0] = element  
-
-        
-      
-        
+   
     }))
+
+    //Exercise 3
+    boardSquares.forEach(element => element.addEventListener("mouseover", () => {element.classList.add("hover")}))
+    boardSquares.forEach(element => element.addEventListener("mouseout", () => {element.classList.remove("hover")}))
+
+
+    
+
 
 }
 
